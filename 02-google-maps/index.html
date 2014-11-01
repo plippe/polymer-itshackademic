@@ -1,0 +1,75 @@
+<!doctype html>
+
+<html>
+<head>
+  <title>blankJs</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+
+  <script src="bower_components/platform/platform.js"></script>
+
+  <link rel="import" href="bower_components/core-icons/core-icons.html">
+  <link rel="import" href="bower_components/core-toolbar/core-toolbar.html">
+  <link rel="import" href="bower_components/font-roboto/roboto.html">
+  <link rel="import" href="bower_components/paper-button/paper-button.html">
+  <link rel="import" href="bower_components/paper-checkbox/paper-checkbox.html">
+  <link rel="import" href="bower_components/paper-icon-button/paper-icon-button.html">
+  <link rel="import" href="bower_components/paper-fab/paper-fab.html">
+  <link rel="import" href="bower_components/paper-tabs/paper-tabs.html">
+  <link rel="import" href="bower_components/paper-toast/paper-toast.html">
+  <link rel="import" href="bower_components/google-map/google-map.html">
+  <link rel="import" href="bower_components/google-map/google-map-directions.html">
+
+  <link rel="import" href="bower_components/core-field/core-field.html">
+  <link rel="import" href="bower_components/core-icon/core-icon.html">
+  <link rel="import" href="bower_components/core-icons/core-icons.html">
+  <link rel="import" href="bower_components/core-icons/maps-icons.html">
+  <link rel="import" href="bower_components/core-item/core-item.html">
+  <link rel="import" href="bower_components/core-selector/core-selector.html">
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body unresolved>
+
+  <template is="auto-binding">
+    <google-map
+        map="{{map}}"
+        latitude="37.779"
+        longitude="-122.3892"
+        disableDefaultUI>
+      <google-map-marker
+          latitude="37.779"
+          longitude="-122.3892"
+          title="Go Giants!"
+          draggable="true"></google-map-marker>
+    </google-map>
+
+    <google-map-directions map="{{map}}" startAddress="{{start}}" endAddress="{{end}}" travelMode="{{travelMode.label}}">
+    </google-map-directions>
+
+    <div id="inputs">
+      <core-selector selected="0" layout horizontal selectedItem={{travelMode}}>
+        <core-item icon="maps:directions-car" label="DRIVING"></core-item>
+        <core-item icon="maps:directions-walk" label="WALKING"></core-item>
+        <core-item icon="maps:directions-bike" label="BICYCLING"></core-item>
+        <core-item icon="maps:directions-transit"
+            label="TRANSIT"></core-item>
+     </core-selector>
+
+      <core-field>
+        <core-icon icon="icons:search"></core-icon>
+        <input placeholder="Start address" value="{{start}}">
+      </core-field>
+      <core-field>
+        <core-icon icon="icons:search"></core-icon>
+        <input placeholder="End address" value="{{end}}">
+      </core-field>
+    </div>
+  </template>
+
+  <script src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,15 @@
+{
+  "name": "blankJs",
+  "description": "",
+  "homepage": "",
+  "keywords": [
+  ],
+  "author": "",
+  "private": true,
+  "dependencies": {
+    "polymer": "Polymer/polymer#master",
+    "platform": "Polymer/platform#master",
+    "google-map": "GoogleWebComponents/google-map#master",
+    "paper-elements": "Polymer/paper-elements#master"
+  }
+}

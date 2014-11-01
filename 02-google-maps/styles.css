@@ -1,0 +1,46 @@
+body, html {
+  font-family: 'Roboto', Arial, sans-serif;
+  height: 100%;
+  margin: 0;
+}
+google-map {
+  display: block;
+  height: 100%;
+}
+
+#inputs {
+  position: absolute;
+  bottom: 25px;
+  left: 25px;
+  z-index: 100;
+}
+
+core-field {
+  background: #fff;
+  border-radius: 3px;
+  margin-top: 5px;
+  width: 200px;
+}
+
+core-field core-icon {
+  vertical-align: middle;
+}
+
+core-selector {
+  background: #eee;
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+core-item {
+  padding: 3px 10px 3px 3px;
+  cursor: pointer !important;
+}
+
+/* Note: <core-selector> applies the core-selected CSS class
+         to the selected item. */
+core-item.core-selected {
+  background: rgb(66, 133, 244);
+  color: white;
+  fill: white;
+}
